@@ -40,7 +40,7 @@ def topSongs():
     rec = getRecomendations(tracks)
     return {'tracks': tracks, 'rec' : rec}
     
-@app.route('GENERATE_PLAYLIST')
+@app.route('/GENERATE_PLAYLIST')
 def generatePlaylist():
     genre = request.form.get('chosen_genre')
     conn = mysql.connector.connect(
